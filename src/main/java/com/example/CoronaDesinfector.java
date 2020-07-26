@@ -1,8 +1,10 @@
 package com.example;
 
+import java.io.Console;
+
 public class CoronaDesinfector {
-    private Announcer announcer = new ConsoleAnnouncer();
-    private Policeman policeman = new PolicemanImpl();
+    private Announcer announcer = ObjectFactory.getInstance().createObject(Announcer.class);
+    private Policeman policeman = ObjectFactory.getInstance().createObject(Policeman.class);
 
     public void start(Room room) {
         desinfect(room);
