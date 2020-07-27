@@ -2,6 +2,7 @@ package com.example;
 
 import lombok.SneakyThrows;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +26,15 @@ public class ObjectFactory {
         }
         T t = implClass.getDeclaredConstructor().newInstance();
         // todo
+        for (Field field : implClass.getDeclaredFields()){
+            InjectProperty annotation = field.getAnnotation(InjectProperty.class);
+            ClassLoader.getSystemClassLoader().getResource("application.properties")
+            if (annotation != null) {
+                if (annotation.value().isEmpty()) {
+
+                }
+            }
+        }
         return t;
     }
 }
