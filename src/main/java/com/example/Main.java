@@ -2,6 +2,7 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        new CoronaDesinfector().start(new Room());
+        CoronaDesinfector desinfector = ObjectFactory.getInstance().createObject(CoronaDesinfector.class);
+        desinfector.start(new Room());
     }
 }

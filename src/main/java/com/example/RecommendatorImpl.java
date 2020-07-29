@@ -1,7 +1,8 @@
 package com.example;
 
+@Singleton
 public class RecommendatorImpl implements Recommendator {
-    @InjectProperty
+    @InjectProperty("wisky")
     private String alcohol;
 
     @Override
