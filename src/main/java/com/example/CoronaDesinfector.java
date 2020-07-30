@@ -1,5 +1,6 @@
 package com.example;
 
+@Deprecated
 public class CoronaDesinfector {
     @InjectByType
     private Announcer announcer;

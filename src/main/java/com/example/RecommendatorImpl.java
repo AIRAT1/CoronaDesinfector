@@ -1,6 +1,7 @@
 package com.example;
 
 @Singleton
+//@Deprecated
 public class RecommendatorImpl implements Recommendator {
     @InjectProperty("wisky")
     private String alcohol;
